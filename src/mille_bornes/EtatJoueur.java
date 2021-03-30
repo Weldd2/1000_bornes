@@ -55,7 +55,7 @@ public class EtatJoueur extends Object {
 	*/
 	
 	public void setBataille​(Bataille carte) {
-		^kpsf;
+		
 	}
 	
 	public void defausseBataille​(Jeu jeu) {
