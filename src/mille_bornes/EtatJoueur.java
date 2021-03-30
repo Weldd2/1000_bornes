@@ -59,7 +59,7 @@ public class EtatJoueur extends Object {
 	}
 	
 	public void defausseBataille​(Jeu jeu) {
-		
+		qfkhlsd;
 	}
 	
 	/*
