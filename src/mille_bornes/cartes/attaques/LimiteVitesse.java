@@ -1,5 +1,10 @@
 package mille_bornes.cartes.attaques;
 
-public class LimiteVitesse {
+import mille_bornes.cartes.Attaque;
 
+public class LimiteVitesse extends Attaque{
+
+	public LimiteVitesse() {
+		super("LimiteVitesse");
+	}
 }

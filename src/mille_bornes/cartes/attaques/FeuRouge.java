@@ -1,5 +1,10 @@
 package mille_bornes.cartes.attaques;
 
-public class FeuRouge {
+import mille_bornes.cartes.Attaque;
 
+public class FeuRouge extends Attaque{
+
+	public FeuRouge() {
+		super("FeuRouge");
+	}
 }
