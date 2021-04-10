@@ -11,37 +11,22 @@ public abstract class Bataille extends Carte{
 	}
 	
 	public boolean estContreeParFeuVert() {
-		if (nom.equalsIgnoreCase("FeuRouge")) {
-			return true;
-		}
 		return false;
 	}
 	
 	public boolean estContreeParFinDeLimite() {
-		if (nom.equalsIgnoreCase("LimiteVitesse")) {
-			return true;
-		}
 		return false;
 	}
 	
 	public boolean estContreeParEssence() {
-		if (nom.equalsIgnoreCase("PanneEssence")) {
-			return true;
-		}
 		return false;
 	}
 	
 	public boolean estContreeParRoueDeSecours() {
-		if (nom.equalsIgnoreCase("Crevaison")) {
-			return true;
-		}
 		return false;
 	}
 	
 	public boolean estContreeParReparations() {
-		if (nom.equalsIgnoreCase("Accident")) {
-			return true;
-		}
 		return false;
 	}
 	

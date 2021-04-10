@@ -17,7 +17,7 @@ public abstract class Attaque extends Bataille {
 	}
 	
 	
-	public void appliqueEffet​(Jeu jeu, EtatJoueur joueur) throws IllegalStateException {
-		
+	public void appliqueEffet(Jeu jeu, EtatJoueur joueur) throws IllegalStateException {
+		//à compléter
 	}
 }

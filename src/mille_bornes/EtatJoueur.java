@@ -34,11 +34,23 @@ public class EtatJoueur extends Object {
 		this.km = this.km + km;
 	}
 	
-	/*
+
 	public String ditPourquoiPeutPasAvancer() {
-		
+		if (pileBataille.lastElement().nom.equalsIgnoreCase("Accident")) {
+			return ("Vous êtes accidenté. Vous devez jouer une carte réparation ou en trouver une pour la jouer");
+		}
+		if (pileBataille.lastElement().nom.equalsIgnoreCase("Crevaison")) {
+			return ("Vos pneus sont crevés. Vous devez jouer une carte roue de secours ou en trouver une pour la jouer");
+		}
+		if (pileBataille.lastElement().nom.equalsIgnoreCase("FeuRouge")) {
+			return ("Vous êtes arreté à un feu rouge. Vous devez jouer une carte feu vert ou en trouver une pour la jouer");
+		}
+		if (pileBataille.lastElement().nom.equalsIgnoreCase("PanneEssence")) {
+			return ("Vous êtes en panne sèche. Vous devez jouer une carte essence ou en trouver une pour la jouer");
+		}
+		return ("erreur");
 	}
-	*/
+
 	
 	public boolean getLimiteVitesse() {
 		return this.limiteVitesse;
@@ -48,11 +60,11 @@ public class EtatJoueur extends Object {
 		this.limiteVitesse = limiteVitesse;
 	}
 	
-	/*
+
 	public Bataille getBataille() {
-		return pileBataille.lastIndexOf(pileBataille);
+		return pileBataille.lastElement();
 	}
-	*/
+
 	
 	public void setBataille​(Bataille carte) {
 		
@@ -62,10 +74,11 @@ public class EtatJoueur extends Object {
 
 	}
 	
-	/*
+	
 	 public List<Carte> getMain() {
+		 return main;
 	 } 
-	 */
+	 
 	
 	
 
@@ -91,21 +104,19 @@ public class EtatJoueur extends Object {
 	}
 	
 	public void joueCarte​(Jeu jeu, int numero) throws IllegalStateException {
-		
+	
 	}
 	
 	public void joueCarte​(Jeu jeu, int numero, Joueur adversaire) throws IllegalStateException {
 		
 	}
 	
-	/*
-	 public List<Botte> getBottes() {
-	 }
-	 */
 	
-	public List<Carte> getMain() {
-		return main;
-	}
+	 public List<Botte> getBottes() {
+	 return bottes;
+	 }
+	 
+
 	
 	
 }
