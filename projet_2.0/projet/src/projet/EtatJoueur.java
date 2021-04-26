@@ -80,9 +80,9 @@ public class EtatJoueur {
 	public void attaque​(Jeu jeu, Attaque carte) throws IllegalStateException {
 
 	}
-	
+
 	public String toString() {
-		
+
 	}
 
 	public void prendCarte​(Carte carte) throws IllegalStateException {
@@ -93,19 +93,24 @@ public class EtatJoueur {
 	}
 
 	public void defausseCarte​(Jeu jeu, int numero) {
-		// jeu.remove(numero); 
-	}
-	
-	public void joueCarte​(Jeu jeu, int numero) throws IllegalStateException {
-
+		jeu.defausse(this.main.get(numero));
+		this.main.remove(numero);
 	}
 
-	public void joueCarte​(Jeu jeu, int numero, Joueur adversaire) throws IllegalStateException {
 
+	public void joueCarte(Jeu jeu, int numero) throws IllegalStateException{
+		if(this.main.get(numero) instanceof Attaque){
+			this.joueCarte(jeu,numero,jeu.getJoueurActif().choisitAdversaire(this.main.get(numero)));
+		}
 	}
-	public List<Botte> getBottes() {
-		return Collections.unmodifiableList(bottes);
-	}
+
+
+public void joueCarte​(Jeu jeu, int numero, Joueur adversaire) throws IllegalStateException {
+
+}
+public List<Botte> getBottes() {
+	return Collections.unmodifiableList(bottes);
+}
 
 
 
