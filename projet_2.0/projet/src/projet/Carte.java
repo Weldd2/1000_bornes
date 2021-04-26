@@ -1,6 +1,6 @@
 package projet;
 
-public abstract class Carte extends Object {
+public abstract class Carte {
     
     public final String nom; 
     public final Categorie categorie; 

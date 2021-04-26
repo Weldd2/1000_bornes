@@ -1,6 +1,7 @@
 package projet;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
@@ -28,12 +29,8 @@ public class EtatJoueur {
 		return km;
 	}
 
-	public boolean getLimiteVitesse() {
-		return limiteVitesse;
-	}
-
-	public void setLimiteVitesse(boolean limiteVitesse) {
-		this.limiteVitesse = limiteVitesse;
+	public void ajouteKm (int km) throws IllegalStateException {
+		this.km = this.km+km;
 	}
 
 	public String ditPourquoiPeutPasAvancer(){
@@ -47,33 +44,45 @@ public class EtatJoueur {
 		return null;
 	}
 
+	public boolean getLimiteVitesse() {
+		return limiteVitesse;
+	}
+
+	public void setLimiteVitesse(boolean limiteVitesse) {
+		this.limiteVitesse = limiteVitesse;
+	}
+
+
+
 	public Bataille getBataille() {
-		return getBataille();
+		return pileBataille.peek();
 	}
 
 	public void setBataille​(Bataille carte) {
-		pileBataille.add(carte); 
+		pileBataille.add(1, carte); 
 	}
 
-	public List<Botte> getBottes() {
-		return bottes;
-	}
 
 	public void defausseBataille​(Jeu jeu) {
 		pileBataille.remove(1);
-		// Jeu.defausse.remove(1);
+		// comprends pas  
+		// defausse.Jeu.remove(1);
 	}
 
 	public List<Carte> getMain() {
-		return main;
+		return Collections.unmodifiableList(main);
 	} 
 
 	public void addBotte​(Botte carte) {
-		// add(carte); 
+		// .add(1, carte);
 	}
 
 	public void attaque​(Jeu jeu, Attaque carte) throws IllegalStateException {
 
+	}
+	
+	public String toString() {
+		
 	}
 
 	public void prendCarte​(Carte carte) throws IllegalStateException {
@@ -82,16 +91,23 @@ public class EtatJoueur {
 			throw new IllegalStateException(); 
 		}
 	}
-	
+
 	public void defausseCarte​(Jeu jeu, int numero) {
-		
+		// jeu.remove(numero); 
 	}
 	
-	public void joueCarte​(Jeu jeu, int numero, Joueur adversaire) throws IllegalStateException {
-		
+	public void joueCarte​(Jeu jeu, int numero) throws IllegalStateException {
+
 	}
 
-	
+	public void joueCarte​(Jeu jeu, int numero, Joueur adversaire) throws IllegalStateException {
+
+	}
+	public List<Botte> getBottes() {
+		return Collections.unmodifiableList(bottes);
+	}
+
+
 
 
 

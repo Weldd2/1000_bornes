@@ -37,6 +37,14 @@ public class Joueur {
 	public boolean getLimiteVitesse () {
 		return etat.getLimiteVitesse();
 	}
+	
+	public int choisitCarte() {
+		
+	}
+	
+	public Joueur choisitAdversaire(Carte carte) throws IllegalStateException {
+		
+	}
 
 
 
